@@ -1,0 +1,9 @@
+﻿{
+  "Id": 2,
+  "Name": "Flying Monkey",
+  "Type": "Air",
+  "Damage": "*Monkey",
+  "Health": "*Monkey",
+  "PreferredTarget": "Air",
+  "Template": "Subtype"
+}

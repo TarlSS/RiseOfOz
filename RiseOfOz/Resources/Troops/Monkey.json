@@ -1,0 +1,9 @@
+﻿{
+  "Id": 1,
+  "Name": "Monkey",
+  "Type": "Ground",
+  "Damage": "6",
+  "Health": "50",
+  "PreferredTarget": "Ground",
+  "Template": "Basic"
+}

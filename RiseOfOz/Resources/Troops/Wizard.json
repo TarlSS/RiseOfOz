@@ -1,0 +1,9 @@
+﻿{
+  "Id": 3,
+  "Name": "Wizard",
+  "Type": "Ground",
+  "Damage": "6",
+  "Health": "60",
+  "PreferredTarget": "All",
+  "Template": "Basic"
+}

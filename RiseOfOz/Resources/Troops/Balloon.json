@@ -1,0 +1,9 @@
+﻿{
+  "Id": 4,
+  "Name": "Balloon",
+  "Type": "Air",
+  "Damage": "8",
+  "Health": "55",
+  "PreferredTarget": "Ground",
+  "Template": "Basic"
+}
