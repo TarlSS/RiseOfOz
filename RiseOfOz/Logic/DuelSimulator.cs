@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 
 namespace RiseOfOz.Logic
 {
+    /// <summary>
+    /// Runs a simulation of two troops attacking each other at the same time.
+    /// Also reports the result. If this were not a console program, we'd
+    /// fire off an event that notifies a DuelReport/Observer.
+    /// </summary>
     public class DuelSimulator
     {
         public DuelSimulator()
@@ -22,6 +27,16 @@ namespace RiseOfOz.Logic
 
         }
 
+        /// <summary>
+        /// For the purpose of this program, it is sufficient to
+        /// report the result of the duel in a string
+        /// 
+        /// In a more complex game, we'd refactor this functionality into a reporter
+        /// class that displays the UI or powers some animations.
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         static string Report(Troop a, Troop b)
         {
             string report = a + " vs. " + b;

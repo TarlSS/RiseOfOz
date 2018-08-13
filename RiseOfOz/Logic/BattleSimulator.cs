@@ -1,35 +1,22 @@
 ﻿using RiseOfOz.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace RiseOfOz.Logic
 {
-    public class BattleResult
-    {
-        public Army Winner;
-        public List<Troop> Remaining;
-        public Troop Mvp;
-        public string Text;
 
-        public override string ToString()
-        {
-
-            string report = $"WINNER\n{Winner.Name} is the winner. Remaining Troops:";
-            for (int i = 0; i < Remaining.Count; i++)
-            {
-                Troop t = Remaining[i];
-                report += $"\n{i + 1}. {t.Info.Name}, health={t.CurrentHealth}, totalDamage={t.InflictedDamage}";
-            }
-
-            report += $"\nThe most outstanding troop is:{Mvp}";
-
-            return report;
-        }
-    }
-
+    /// <summary>
+    /// Simulates a battle between two armies.
+    /// Each army is assigned a commander that places all troops in a queue
+    /// Commanders pick the next troop in the queue and they duel.
+    /// Commanders continue dueling troops until one is defeated, in that
+    /// they have no living troops left.
+    /// 
+    /// The simulator then places the data into a BattleResult, which reports
+    /// to the console data on the winning army and the MVP
+    /// </summary>
     public class BattleSimulator
     {
         Commander commanderA;

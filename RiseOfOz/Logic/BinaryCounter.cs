@@ -2,6 +2,9 @@
 
 namespace RiseOfOz.Logic
 {
+    /// <summary>
+    /// Counts the number of consecutive ones in a binary number
+    /// </summary>
     public class BinaryCounter
     {
         public static int ConsecutiveOnes(int value)

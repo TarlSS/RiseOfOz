@@ -12,6 +12,9 @@ namespace RiseOfOzTests.Logic
     [TestFixture]
     public class DuelSimulatorTests
     {
+        /// <summary>
+        /// Ensure the damage dealt is as expected against a troop's preferred target
+        /// </summary>
         [Test]
         public void DuelTest_Preferred()
         {
@@ -47,25 +50,36 @@ namespace RiseOfOzTests.Logic
 
         }
 
+        /// <summary>
+        /// Check that "All" target preference is properly accounted for
+        /// </summary>
         [Test]
         public void DuelTest_All()
         {
             TroopFactory factory = MockTroopFactory.Create();
             Troop a = factory.Create("Wizard");
             Troop b = factory.Create("Balloon");
+            Troop c = factory.Create("Monkey");
 
             int expectedB = b.Info.Health - a.Info.Damage;
+            int expectedC = c.Info.Health - a.Info.Damage;
 
             string result = DuelSimulator.Duel(a, b);
+            DuelSimulator.Duel(a, c);
 
             Assert.AreEqual(expectedB, b.CurrentHealth);
+            Assert.AreEqual(expectedC, c.CurrentHealth);
 
             Console.WriteLine(result);
 
         }
 
+        /// <summary>
+        /// When killing a troop, ensure inflicted damage doesn't count overkill damage. 
+        /// (Record damage above the amount the dying troop had remaining)
+        /// </summary>
         [Test]
-        public void DuelTest_Kill()
+        public void DuelTest_Overkill()
         {
             TroopFactory factory = MockTroopFactory.Create();
             Troop a = factory.Create("Wizard");

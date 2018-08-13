@@ -48,20 +48,15 @@
   <ItemGroup>
     <Compile Include="IO\ArmyReader.cs" />
     <Compile Include="Logic\ArmyComposer.cs" />
+    <Compile Include="Models\BattleResult.cs" />
     <Compile Include="Logic\BattleSimulator.cs" />
     <Compile Include="Logic\BinaryCounter.cs" />
     <Compile Include="Logic\Commander.cs" />
     <Compile Include="Logic\DuelSimulator.cs" />
     <Compile Include="Logic\TroopFactory.cs" />
     <Compile Include="Models\Army.cs" />
-    <Compile Include="Resource.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resource.resx</DependentUpon>
-    </Compile>
     <Compile Include="IO\TemplateReader.cs" />
     <Compile Include="Models\Troop.cs" />
-    <Compile Include="Models\TroopTemplate.cs" />
     <Compile Include="Models\TroopType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,12 +83,6 @@
     <None Include="Resources\Troops\Monkey.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -12,6 +12,9 @@ namespace RiseOfOzTests.Logic
     [TestFixture]
     public class ArmyComposerTests
     {
+        /// <summary>
+        /// Ensures the army composer is correctly ordering troops and handling overflows
+        /// </summary>
         [Test]
         public void ComposeTest()
         {

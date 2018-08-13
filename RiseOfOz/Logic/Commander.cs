@@ -38,6 +38,10 @@ namespace RiseOfOz.Logic
             return troopQ.Dequeue();
         }
 
+        /// <summary>
+        /// Enqueues a troop, or if it's dead, adds it to casualties
+        /// </summary>
+        /// <param name="t"></param>
         public void Enqueue(Troop t)
         {
             if (t.CurrentHealth > 0)
@@ -50,6 +54,10 @@ namespace RiseOfOz.Logic
             }
         }
 
+        /// <summary>
+        /// Gives a list of all living troops left
+        /// </summary>
+        /// <returns></returns>
         public List<Troop> Remaining()
         {
             List<Troop> remaining = new List<Troop>();
@@ -63,6 +71,12 @@ namespace RiseOfOz.Logic
             return remaining;
         }
 
+        /// <summary>
+        /// Picks the troop that did an amount of damage that has the 
+        /// most consecutives 1's in a binary representation.
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public Troop CalcMVP()
         {
             

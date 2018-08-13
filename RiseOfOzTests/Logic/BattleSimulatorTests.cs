@@ -40,6 +40,10 @@ namespace RiseOfOzTests.Logic
 
         }
 
+        /// <summary>
+        /// Ensure that monkeys lose to wizards.
+        /// Best Practices: Create a test generator that runs through all possible army combos.
+        /// </summary>
         [Test]
         public void BattleTest()
         {

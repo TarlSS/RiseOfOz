@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace RiseOfOz.Models
 {
+    /// <summary>
+    /// An individiual troop or soldier. Forms armies and
+    /// has statistics derived from TroopType
+    /// </summary>
     public class Troop
     {
         private static int nextId = 0;
@@ -23,6 +27,10 @@ namespace RiseOfOz.Models
             this.InflictedDamage = 0;
         }
 
+        /// <summary>
+        /// Applies damage to another troop
+        /// </summary>
+        /// <param name="defender"></param>
         public void Attack(Troop defender)
         {
             int damageDealt = Info.Damage;

@@ -24,6 +24,9 @@ namespace RiseOfOzTests.Logic
             troopTypes.Add(monkey.Name, monkey);
         }
 
+        /// <summary>
+        /// Create a troop from a valid JSON configuration
+        /// </summary>
         [Test]
         public void CreateTroop_Valid()
         {
@@ -38,6 +41,9 @@ namespace RiseOfOzTests.Logic
             Assert.AreEqual(t.CurrentHealth, monkey.Health);
         }
 
+        /// <summary>
+        /// Throw an error when trying to create a troop type that doesn't exist
+        /// </summary>
         [Test]
         public void CreateTroop_NotExist()
         {

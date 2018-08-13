@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace RiseOfOz.Models
 {
+    /// <summary>
+    /// Represents an Army
+    /// Populated by an ArmyReader which reads an army JSON dataset.
+    /// The List of troops and order of them is determined by the composition
+    /// </summary>
     public class Army
     {
         public string Name { get; set; }

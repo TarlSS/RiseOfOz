@@ -32,7 +32,7 @@ namespace RiseOfOzTests
         /*
          * Best Practices: Write more tests regarding
          * 1) Possible JSON Errors
-         * 2) Corrupt files
+         * 2) Absent, Corrupt or incorrectly formatted files
          * 3) Attempts to cheat
          * 
          * Settings these tests and edge cases up takes a lot of time and is a little bit above and beyond

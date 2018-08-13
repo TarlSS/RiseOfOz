@@ -11,6 +11,12 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace RiseOfOz
 {
+    /// <summary>
+    /// The main program to run this game.
+    /// TroopTypes and Armies can be altered by changing values in the json files found in the Resources folder.
+    /// Currently this is hard coded to fight between the Bad and Good armies, but match setup info could also
+    /// be placed into an external data file.
+    /// </summary>
     class Program
     {
         static Dictionary<string, TroopType> troopTypes;

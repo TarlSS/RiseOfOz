@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 
 namespace RiseOfOzTests.Logic
 {
+    /// <summary>
+    /// Test different arrangements of binary numbers to ensure our consecutive one's counter is working
+    /// properly
+    /// </summary>
     [TestFixture]
     public class BinaryCounterTests
     {

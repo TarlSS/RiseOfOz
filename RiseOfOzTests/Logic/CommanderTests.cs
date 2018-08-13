@@ -31,6 +31,9 @@ namespace RiseOfOzTests.Logic
 
         }
 
+        /// <summary>
+        /// Ensure the next troop is being called correctly
+        /// </summary>
         [Test]
         public void NextTest()
         {
@@ -43,8 +46,11 @@ namespace RiseOfOzTests.Logic
             Assert.AreEqual("Wizard", result.Info.Name);
         }
         
+        /// <summary>
+        /// Ensure casualties are counted correctly in the enqueue function
+        /// </summary>
         [Test]
-        public void EnqueueTest()
+        public void CasualtyEnqueueTest()
         {
             Commander commander = new Commander(army);
             Troop result = commander.Next();
